@@ -52,6 +52,8 @@ import turtle
 # as their common root.  The first construction of a RoseWindow
 # sets this  _master_Tk  to a Tkinter.Tk object.
 # ----------------------------------------------------------------------
+from typing import Union
+
 _master_Tk = None
 
 
@@ -515,6 +517,7 @@ class _ShapeWithOutline(object):
     Public data attributes:  fill_color, outline_color, outline_thickness.
     Public methods:  _initialize_options.
     """
+    fill_color: Union[None, str, int]
     defaults = {'fill_color': None,
                 'outline_color': 'black',
                 'outline_thickness': 1}
